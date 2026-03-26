@@ -13,7 +13,7 @@ function FinalScoreCard() {
                     </p>
                 </div>
                 <div className="">
-                    <h3 className='font-bold text-[2rem] text-primary-white'>Great</h3>
+                    <h2 className='font-bold text-[2rem] text-primary-white'>Great</h2>
                     <p className='font-medium text-lg mt-4'>You scored higher than 65% of the people who have taken these tests.</p>
                 </div>
             </div>
