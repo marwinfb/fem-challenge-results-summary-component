@@ -6,43 +6,43 @@ import MemoryIcon from "../../assets/icons/icon-memory.svg";
 import VerbalIcon from "../../assets/icons/icon-verbal.svg";
 import VisualIcon from "../../assets/icons/icon-visual.svg";
 
-const scoreData = [
-  {
-    category: "Reaction",
-    score: 80,
-    icon: ReactionIcon,
-  },
-  {
-    category: "Memory",
-    score: 92,
-    icon: MemoryIcon,
-  },
-  {
-    category: "Verbal",
-    score: 61,
-    icon: VerbalIcon,
-  },
-  {
-    category: "Visual",
-    score: 72,
-    icon: VisualIcon,
-  },
-];
-
 function SingularScoreForm() {
+  const scoreData = [
+    {
+      category: "Reaction",
+      score: 80,
+      icon: ReactionIcon,
+    },
+    {
+      category: "Memory",
+      score: 92,
+      icon: MemoryIcon,
+    },
+    {
+      category: "Verbal",
+      score: 61,
+      icon: VerbalIcon,
+    },
+    {
+      category: "Visual",
+      score: 72,
+      icon: VisualIcon,
+    },
+  ];
+
   return (
     <div className="flex items-center justify-center md:rounded-tr-4xl md:rounded-br-4xl bg-primary-white">
-        <div className="space-y-6 md:space-y-8 p-7.5 ">
-            <h3 className="font-bold text-lg text-primary-navy-950">Summary</h3>
+      <div className="space-y-6 md:space-y-8 p-7.5 ">
+        <h2 className="font-bold text-lg text-primary-navy-950">Summary</h2>
 
-            <div className="space-y-4">
-                {scoreData.map((score) => (
-                    <Score key={score.category} score={score} />
-                ))}
-            </div>
-
-            <Button />
+        <div className="space-y-4">
+          {scoreData.map((score) => (
+            <Score key={score.category} score={score} />
+          ))}
         </div>
+
+        <Button />
+      </div>
     </div>
   );
 }

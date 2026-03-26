@@ -1,25 +1,23 @@
 
 
-
-
-const backgroundColors = {
-  Reaction: "bg-primary-red-50",
-  Memory: "bg-primary-yellow-50",
-  Verbal: "bg-primary-green-50",
-  Visual: "bg-primary-blue-50",
-};
-
-const textColors = {
-  Reaction: "text-primary-red-400",
-  Memory: "text-primary-yellow-400",
-  Verbal: "text-primary-green-500",
-  Visual: "text-primary-blue-800",
-};
-
 function Score({ score }) {
+  const backgroundColors = {
+    Reaction: "bg-primary-red-50",
+    Memory: "bg-primary-yellow-50",
+    Verbal: "bg-primary-green-50",
+    Visual: "bg-primary-blue-50",
+  };
+
+  const textColors = {
+    Reaction: "text-primary-red-400",
+    Memory: "text-primary-yellow-400",
+    Verbal: "text-primary-green-500",
+    Visual: "text-primary-blue-800",
+  };
+
   return (
-    <div className="space-y-4">
-      <div className={`py-[16.5px] px-4.75 rounded-xl ${backgroundColors[score.category]}`}>
+    <ul className="space-y-4">
+      <li className={`py-[16.5px] px-4.75 rounded-xl ${backgroundColors[score.category]}`}>
         <div className="flex items-center justify-between gap-20">
           <div className="flex items-center gap-4">
             <img src={score.icon} className="size-5" alt={`${score.category} Icon`} />
@@ -34,8 +32,8 @@ function Score({ score }) {
             </p>
           </div>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   );
 }
 
