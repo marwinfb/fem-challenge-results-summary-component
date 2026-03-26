@@ -33,13 +33,13 @@ function SingularScoreForm() {
   return (
     <div className="flex items-center justify-center md:rounded-tr-4xl md:rounded-br-4xl bg-primary-white">
       <div className="space-y-6 md:space-y-8 p-7.5 ">
-        <h3 className="font-bold text-lg text-primary-navy-950">Summary</h3>
+        <h3 className="font-bold text-lg md:text-2xl text-primary-navy-950">Summary</h3>
 
-        <div className="space-y-4">
+        <ul className="space-y-4">
           {scoreData.map((score) => (
             <Score key={score.category} score={score} />
           ))}
-        </div>
+        </ul>
 
         <Button />
       </div>
